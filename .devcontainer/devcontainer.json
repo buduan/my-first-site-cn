@@ -1,0 +1,41 @@
+{
+  "name": "My First Site",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bullseye",
+  
+  // 配置要安装的 VS Code 扩展
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Vue.volar",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
+    }
+  },
+
+  // 转发端口
+  "forwardPorts": [5173],
+  "portsAttributes": {
+    "5173": {
+      "label": "Vite Dev Server",
+      "onAutoForward": "notify"
+    }
+  },
+
+  // 容器创建后执行的命令
+  "postCreateCommand": "npm install -g pnpm && pnpm install",
+  
+  // 容器启动后执行的命令
+  "postStartCommand": "pnpm dev",
+
+  // 保持容器运行
+  "features": {
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  }
+}
