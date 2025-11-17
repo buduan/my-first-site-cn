@@ -7,17 +7,6 @@ body {
 }
 
 a {
-  color: var(--color-blue-600);
-  text-decoration: none;
-
-  &:hover {
-    text-decoration: underline;
-    color: var(--color-blue-400);
-  }
-
-  &:visited {
-    color: var(--color-blue-600);
-  }
 }
 
 h1,
@@ -27,7 +16,6 @@ h4,
 h5,
 h6 {
   font-weight: bold;
-  color: var(--color-slate-900);
 }
 
 h1 {
